@@ -15,7 +15,7 @@ const [form, setForm] = useState(initialForm);
   const handleReset = (e) => {};
 
   return (
-    <div>
+    <>
       <h3>Agregar</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Ingrese nombre: </label>
@@ -29,6 +29,6 @@ const [form, setForm] = useState(initialForm);
         <input type="submit" />
         <input type="reset" onClick={handleReset}/>
       </form>
-    </div>
+    </>
   );
 }

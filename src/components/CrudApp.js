@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from 'react';
 import CrudAppForm from "./CrudAppForm";
+import CrudAppTable from "./CurdAppTable";
 
 // Base de Datos
-const frameworksDB = [
+const initialDb = [
   {
     id: 1,
     name: "Angular",
@@ -21,14 +22,17 @@ const frameworksDB = [
 ];
 
 export default function () {
+    const [db, setDb] = useState(initialDb);
+    
+    console.log(initialDb)
   return (
-    <div>
+    <>
         {/* Título */}
       <h2>Tecnologías JS</h2>
       {/* Formulario para capturar datos */}
       <CrudAppForm/>
       {/* Resultados en tabla */}
-      <table></table>
-    </div>
+      <CrudAppTable data={initialDb}/>
+    </>
   );
 }
