@@ -1,5 +1,7 @@
 import React from "react";
+import CrudAppForm from "./CrudAppForm";
 
+// Base de Datos
 const frameworksDB = [
   {
     id: 1,
@@ -21,7 +23,12 @@ const frameworksDB = [
 export default function () {
   return (
     <div>
-      <h2>CRUD</h2>
+        {/* Título */}
+      <h2>Tecnologías JS</h2>
+      {/* Formulario para capturar datos */}
+      <CrudAppForm/>
+      {/* Resultados en tabla */}
+      <table></table>
     </div>
   );
 }
